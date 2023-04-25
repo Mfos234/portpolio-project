@@ -6,7 +6,7 @@ export default function App() {
     <div className="App">
       <h1>Welcome to my site</h1>
       <p>Check back frequently!!!</p>
-      <p>This site is a Project that I am building live infront of everyone</p>
+      <p>This site is a Project that I am building live in front of everyone</p>
       <p>
         I am a [Insert Tech Role + Artistic Role] that is currently [Insert
         Purpose + Passion]
