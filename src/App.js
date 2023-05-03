@@ -14,7 +14,7 @@ export default function App() {
       <div>
         <h3>Todo List</h3>
         <ul>
-          <li>Add a Projecets Section</li>
+          <li>Add a Projects Section</li>
           <li>Add an About Section</li>
           <li>Add a Contact Section</li>
           <li>Pick a CSS Theme</li>
