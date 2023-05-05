@@ -1,34 +1,60 @@
+import React from "react";
 import "./styles.css";
-import { NavLink } from "react-router-dom";
+import About from "./About";
+import Contact from "./Contact";
+import Projects from "./Projects";
+import Nav from "./Nav";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Typewriter from "typewriter-effect";
 
 export default function App() {
   return (
-    <div className="App">
-      <h1>Welcome to my site</h1>
-      <p>Check back frequently!!!</p>
-      <p>This site is a Project that I am building live in front of everyone</p>
-      <p>
-        I am a [Insert Tech Role + Artistic Role] that is currently [Insert
-        Purpose + Passion]
-      </p>
-      <div>
-        <h3>Todo List</h3>
-        <ul>
-          <li>Add a Projects Section</li>
-          <li>Add an About Section</li>
-          <li>Add a Contact Section</li>
-          <li>Pick a CSS Theme</li>
-        </ul>
+    <Router>
+      <div className="App">
+        <Nav />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/about" component={About} />
+          <Route path="/contact" component={Contact} />
+          <Route path="/projects" component={Projects} />
+        </Switch>
       </div>
-      <div>
-        <h3>Experience</h3>
-        <ul>
-          <li>iOS Development: Swift, SwiftUI, Objective-C, XCODE</li>
-          <li>Android Development: Java, Kotlin, Android Studio</li>
-          <li>
-            Web Development: React, Javascript, Typescript, MongoDB, Node.JS
-          </li>
-        </ul>
+    </Router>
+  );
+}
+
+function Home() {
+  return (
+    <div>
+      <h1>Welcome!</h1>
+      <p>My Name is Tony Stark</p>
+      <div className="bio-sentence">
+        <p>I am a(n)</p>
+        <Typewriter
+          onInit={(typewriter) => {
+            typewriter
+
+              .typeString("strategist")
+              .pauseFor(500)
+              .deleteAll()
+              .typeString("builder")
+              .pauseFor(500)
+              .deleteAll()
+              .typeString("trendsetter")
+              .pauseFor(500)
+              .deleteAll()
+              .pauseFor(500)
+              .deleteAll()
+              .typeString("visionary")
+              .pauseFor(500)
+              .deleteAll()
+              .typeString("curator")
+              .pauseFor(500)
+              .deleteAll()
+              .typeString("innovator￼")
+              .start();
+          }}
+        />
       </div>
     </div>
   );
