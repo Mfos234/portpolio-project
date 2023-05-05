@@ -1,11 +1,41 @@
+body {
+  font-family: "Courier New", Courier, monospace;
+}
 .App {
   font-family: "Courier New", Courier, monospace;
   text-align: center;
 }
-h3 {
+h3 {￼
   text-align: left;
 }
 
-ul li {
+ul {
   text-align: left;
+}
+ul a {
+  color: black;
+  display: inline;
+  text-align: left;
+  padding: 15px 18px;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.profile-text {
+  padding-left: 15px;
+  margin-top: 0px;
+}
+
+.bio-sentence {
+  display: flex;
+  flex-direction: row;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.bio-sentence p {
+  margin-top: 0px;
+}
+.Typewriter {
+  padding-left: 5px;
 }
